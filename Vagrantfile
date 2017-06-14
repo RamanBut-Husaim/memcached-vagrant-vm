@@ -3,7 +3,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "centos/7"
-  config.vm.network :forwarded_port, guest: 6676, host: 6676, host_ip: "127.0.0.1"
+  config.vm.network :forwarded_port, guest: 11211, host: 11211, host_ip: "127.0.0.1"
 
   config.vm.provider :virtualbox do |vbox|
     vbox.customize ["modifyvm", :id, "--memory", 2048]
